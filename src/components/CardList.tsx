@@ -23,7 +23,7 @@ export function CardList({ cards }: CardsProps): JSX.Element {
   const [imgUrl, setImgUrl] = useState('');
 
   // TODO FUNCTION HANDLE VIEW IMAGE
-  function viewImage(url: string) {
+  function viewImage(url: string): void {
     setImgUrl(url);
     onOpen();
   }
@@ -33,7 +33,7 @@ export function CardList({ cards }: CardsProps): JSX.Element {
       {/* TODO CARD GRID */}
       <SimpleGrid columns={3} spacing={9}>
         {cards.map(card => (
-          <Card key={card.id} data={card} viewImage={viewImage} />
+          <Card key={card.ts} data={card} viewImage={viewImage} />
         ))}
       </SimpleGrid>
 
